@@ -3,24 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class RespawnOnFall : MonoBehaviour
 {
-    public float yRespawnValue;
+    public float yRespawn;
+    public RespownPoint respawnPoint;
+    public Transform SpawnPoint;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        respawnPoint = FindObjectOfType<RespownPoint>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (transform.position.y < yRespawnValue)
+        if (transform.position.y < yRespawn)
         {
-            //Debug.Log("Me caí :(");
-            SceneManager.LoadScene("FPS Parkour");
+            if (respawnPoint.zone == "New")
+            {
+                Debug.Log("FKEOFEJWK");
+                transform.position = SpawnPoint.position;
+            }
+            else
+            {
+                SceneManager.LoadScene("Fps");
+            }
         }
     }
 }
