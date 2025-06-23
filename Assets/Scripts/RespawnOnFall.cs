@@ -8,6 +8,7 @@ public class RespawnOnFall : MonoBehaviour
     public float yRespawn;
     public RespownPoint respawnPoint;
     public Transform SpawnPoint;
+    public CharacterController character;
 
     void Start()
     {
@@ -20,8 +21,9 @@ public class RespawnOnFall : MonoBehaviour
         {
             if (respawnPoint.zone == "New")
             {
-                Debug.Log("FKEOFEJWK");
+                character.enabled = false;
                 transform.position = SpawnPoint.position;
+                character.enabled = true;
             }
             else
             {

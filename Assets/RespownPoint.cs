@@ -10,6 +10,7 @@ public class RespownPoint : MonoBehaviour
     void OnTriggerEnter(Collider collider)
     {
         zone = "New";
+       
     }
 
 }

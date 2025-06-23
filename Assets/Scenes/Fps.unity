@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1443,6 +1443,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   money: 35
   uiManager: {fileID: 266674329}
+--- !u!143 &1567013924 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 8301348219250944349, guid: d23a71d629ca2cb428e58efdcf5d4c1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1585468267}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1567013925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1458,6 +1464,7 @@ MonoBehaviour:
   yRespawn: -8
   respawnPoint: {fileID: 0}
   SpawnPoint: {fileID: 1602763828}
+  character: {fileID: 1567013924}
 --- !u!114 &1567013927
 MonoBehaviour:
   m_ObjectHideFlags: 0
