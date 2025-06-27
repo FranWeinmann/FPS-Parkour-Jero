@@ -4,22 +4,32 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    // Función para activar menu
-    public bool menuInterfaceActivator(bool mPressed)
+    public GameObject character; // referencia al jugador
+    public UIManager uiManager;
+    private bool isMenuOpen = false;
+
+    void Start()
     {
-        if (mPressed)
-        {
-            return true;
-        }
-        return false;
+        uiManager = FindObjectOfType<UIManager>();
     }
 
     void Update()
     {
-        // Si se aprieta la tecla M, activar menú
         if (Input.GetKeyDown(KeyCode.M))
         {
-            menuInterfaceActivator(true);
+            isMenuOpen = !isMenuOpen;
+            uiManager.ShowMenu(isMenuOpen);
+
+            // Activar o desactivar el FirstPersonController para pausar o reanudar control
+            var fpsController = character.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
+            if (fpsController != null)
+            {
+                fpsController.enabled = !isMenuOpen;
+            }
+
+            // Control del cursor
+            Cursor.lockState = isMenuOpen ? CursorLockMode.None : CursorLockMode.Locked;
+            Cursor.visible = isMenuOpen;
         }
     }
 }

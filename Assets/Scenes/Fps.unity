@@ -847,7 +847,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56, y: 83}
+  m_AnchoredPosition: {x: 59.9, y: 124.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &622664169
@@ -1293,7 +1293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 625, y: 0}
+  m_AnchoredPosition: {x: 0, y: 339}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &936300144
@@ -1309,7 +1309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.8040824, a: 0}
+  m_Color: {r: 0, g: 1, b: 0.8040824, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1731,6 +1731,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f93a314f668ca40a31a0778c6c66c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 1567013919}
+  uiManager: {fileID: 266674329}
 --- !u!4 &1573068795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6515107143243437969, guid: e77eb663f1478bc4faf23d98f707aca4,
