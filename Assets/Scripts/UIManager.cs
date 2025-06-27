@@ -9,7 +9,6 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI txtMoney;
     public TextMeshProUGUI txtLife;
     public Image panelImage;
-    public Image menuImage;
 
     public void UpdateMoneyText(string money)
     {
@@ -28,9 +27,9 @@ public class UIManager : MonoBehaviour
         panelImage.color = color;
     }
 
-    public void ShowMenu(bool isItTrue)
+    public void ShowMenu(bool isItTrue, Image menuOption)
     {
-        RectTransform rt = menuImage.GetComponent<RectTransform>();
+        RectTransform rt = menuOption.GetComponent<RectTransform>();
 
         if (isItTrue)
         {
