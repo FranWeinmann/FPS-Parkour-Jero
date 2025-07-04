@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DamageManager : MonoBehaviour
 {
     public float life; // O health
     public UIManager uiManager;
+    public Image imagen;
+    bool isDead = false;
 
     void Start()
     {
@@ -17,7 +20,9 @@ public class DamageManager : MonoBehaviour
     {
         if (life - damage < 1)
         {
-            SceneManager.LoadScene("FPS Parkour");
+            isDead = true;
+            uiManager.ShowMenu(true, imagen);
+            uiManager.CancelUserMovement(isDead);
             return false;
         }
         else

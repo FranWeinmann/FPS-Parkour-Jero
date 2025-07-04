@@ -14,6 +14,6 @@ public class ButtonManager : MonoBehaviour
 
     public void ButtonPressed()
     {
-        SceneManager.LoadScene("FPS Parkour");
+        SceneManager.LoadScene("Fps");
     }
 }

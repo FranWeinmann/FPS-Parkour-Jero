@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI txtMoney;
     public TextMeshProUGUI txtLife;
     public Image panelImage;
+    public GameObject character; // referencia al jugador
 
     public void UpdateMoneyText(string money)
     {
@@ -43,5 +44,19 @@ public class UIManager : MonoBehaviour
             rt.offsetMin = new Vector2(rt.offsetMin.x, 350);
             rt.offsetMax = new Vector2(rt.offsetMax.x, 0);
         }
+    }
+
+    public void CancelUserMovement(bool isMenuOpen)
+    {
+        // Activar o desactivar el FirstPersonController para pausar o reanudar control
+        var fpsController = character.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
+        if (fpsController != null)
+        {
+            fpsController.enabled = !isMenuOpen;
+        }
+
+        // Control del cursor
+        Cursor.lockState = isMenuOpen ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = isMenuOpen;
     }
 }
