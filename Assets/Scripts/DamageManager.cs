@@ -21,6 +21,7 @@ public class DamageManager : MonoBehaviour
         if (life - damage < 1)
         {
             isDead = true;
+            uiManager.UpdateLifeText(0.ToString());
             uiManager.ShowMenu(true, imagen);
             uiManager.CancelUserMovement(isDead);
             return false;

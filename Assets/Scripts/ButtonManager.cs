@@ -5,13 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-    public UIManager uiManager;
-
-    void Start()
-    {
-        uiManager = FindObjectOfType<UIManager>();
-    }
-
     public void ButtonPressed()
     {
         SceneManager.LoadScene("Fps");
