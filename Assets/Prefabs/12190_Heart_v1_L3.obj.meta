@@ -11,7 +11,12 @@ ModelImporter:
     2300000: Heart
     3300000: Heart
     4300000: Heart
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HeartMat
+    second: {fileID: 2100000, guid: 01309cec8769a8a49b82269bd272e0cb, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
